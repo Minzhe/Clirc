@@ -1,0 +1,79 @@
+Install Perl module
+===================
+
+To install Perl modules, it would be best if you are administrator or you have a Perl version intalled under your own directory. Otherwise, asking your administrator to help install the module for you may be easier. To install the Perl module yourself (here I use PDL as an example), please check out the following instructions... 
+
+-----------------------------
+
+On Unix system, use the following command should probably work for you
+
+  $ perl -MCPAN -e 'install PDL'
+
+If this does not work, you can download the tar.gz file from the http://www.cpan.org/ website
+
+  $ tar -zxvf PDL-2.4.11.tar.gz
+
+Go to the unzipped folder, and then
+
+  $ perl Makefile.PL
+  $ make
+  $ make test
+  $ make install
+
+(unless otherwise indicated in the Perl module installation guide)
+
+------------------------------
+
+On Windows system, if you have active state Perl installation, open a command line window (cmd) and type
+  
+  $ ppm
+
+  In the ppm prompt, type
+  
+  $ install PDL
+
+To manually install Perl module on Windows, download the package source and unzip it. You need the nmake utilities from MicroSoft (but you probably already have it on your computer). Still open a command line window, go to the folder and type
+
+  $ perl Makefile.PL
+  $ nmake
+  $ nmake test
+  $ nmake install
+
+If nmake fails, check if there are spaces in file paths. During the test step, a few tests may fail. It probably will not cause trouble when you are actually running any Perl script with PDL involved.
+
+-------------------------------
+
+On Mac OS system, this would take a bit more effort. 
+
+  First, install XCode from App Store and launch XCode (if you do not have it yet). 
+  Secondly, open the Preferences panel and click the Downloads tab to install the Command Line Tools. To check its successful installation, type the following command in Mac Terminal
+
+  $ which make
+
+  Thirdly, configure CPAN by using the following command in Mac Terminal. Most importantly, you should give the path of make, which is returned by the above command.
+
+  $ perl -MCPAN -e shell
+
+  Then in the CPAN shell  
+
+  $ o conf init
+  
+  Finally, intall the PDL module
+
+  $ sudo perl -MCPAN -e 'install PDL'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
