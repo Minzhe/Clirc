@@ -2,8 +2,8 @@
 #            half2library.pl            #
 # ===================================== #
 # This perl script is to extract circRNA half sequence and assembly into a fasta file for alignment index building
-# @ARGV[0]: input file
-# @ARGV[1]: output file
+# $input_fil: input file
+# $output_file: output file
 # demo: perl bin/half2library.pl /Users/minzhe/Documents/Project/Clirc/data/test/library/halves.txt /Users/minzhe/Documents/Project/Clirc/data/test/library/circRNA.fa
 #!/usr/bin/perl
 
@@ -25,8 +25,8 @@ while ($header = <FILE_IN>) {
     ($coord, $source) = split(":", $header);
     $left =~ s/\n//;
     $right =~ s/\n//;
-    if (! exists $circ{$right . $right}) {
-        $circ{$right, $left} = $coord . "_circ_" . length($right) . "_" . length($left);
+    if (! exists $circ{$right . $left}) {
+        $circ{$right . $left} = $coord . "_circ_" . length($right) . "_" . length($left);
     }
 }
 

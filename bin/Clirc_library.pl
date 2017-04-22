@@ -36,8 +36,8 @@ if (!-d $library) {
 
 if ($help == 1) {
     $message = << 'HELP';
+Clirc_library: build alignment library for identifying RBP-bound circRNAs from CLIP-Seq data.
 
-    Clirc_library: build alignment library for identifying RBP-bound circRNAs from CLIP-Seq data
 Options:
     -coord          coordinates of known circRNAs, a tab-delimited file with 3 columns, chromosomes, start coordinates and end coordinates
     -genome         file name (including path) of the reference genome fasta file
@@ -50,17 +50,19 @@ HELP
     exit;
 }
 
+print "* Start building alignment library. *\n";
 0 == system("perl " . $path . "/circRNA2region.pl " . $expand . " " . $library . "/circRNA_coordinates.txt " . "$coord")
     or die("Extracting circRNA coordinates failed!\n");
 0 == system("perl " . $path . "/index.pl " . $genome . " " . $library . "/index.txt")
     or die("Indexing genome failed!\n");
-0 == system("perl " . $path . "query.pl " . $library . "/index.txt " . $genome . " " . $library . "/circRNA_coordinates.txt " . $library . "/halves.txt 1")
+0 == system("perl " . $path . "/query.pl " . $library . "/index.txt " . $genome . " " . $library . "/circRNA_coordinates.txt " . $library . "/halves.txt 1")
     or die("Extracting circRNA sequences failed!\n");
-0 == system("perl " . $path . "half2library.pl " . $library . "/halves.txt " . $library . "/circRNA.fa")
+0 == system("perl " . $path . "/half2library.pl " . $library . "/halves.txt " . $library . "/circRNA.fa")
     or die("Assembling circRNA fastq file failed!\n");
 print "Calling gmap_build, it could be slow ...\n";
 0 == system("gmap_build -D " . $library . " -d circRNA " . $genome . " " . $library . "/circRNA.fa >/dev/null 2>&1")
     or die("Calling gmap_build failed!\n");
+print "* Done building alignment library! *\n";
 
 
 

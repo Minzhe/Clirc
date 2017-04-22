@@ -1,9 +1,9 @@
 # ===================================== #
-#           circRNA2region.pl           #
+#                index.pl               #
 # ===================================== #
 # This perl script is to index the reference genome
-# @ARGV[0]: the absolute path of reference genome fasta file
-# @ARGV[1]: the absolute path of output index file
+# $input_file: the absolute path of reference genome fasta file
+# $output_file: the absolute path of output index file
 # test: perl /Users/minzhe/Documents/Project/Clirc/bin/index.pl /Users/minzhe/Documents/Project/Clirc/data/test/chr4.fa.masked /Users/minzhe/Documents/Project/Clirc/data/test/library/index.txt
 #!/usr/bin/perl
 

@@ -2,11 +2,11 @@
 #                query.pl               #
 # ===================================== #
 # This perl script take the strandless circRNA coordinates and extract the left and right boundaries for sequence queries.
-# @ARGV[0]: the index file
-# @ARGV[1]: the genome file
-# @ARGV[2]: the coordinates file (tab-delimited with 5 columns, chr, strand, start, end, name)
-# @ARGV[3]: the output sequence file
-# @ARGV[4]: specify the format of output (0: raw, 1: fasta, 2: fastq)
+# $index: the index file
+# $genome: the genome file
+# $coords: the coordinates file (tab-delimited with 5 columns, chr, strand, start, end, name)
+# $seq: the output sequence file
+# $format: specify the format of output (0: raw, 1: fasta, 2: fastq)
 # test：perl bin/query.pl /Users/minzhe/Documents/Project/Clirc/data/test/library/index.txt /Users/minzhe/Documents/Project/Clirc/data/test/chr4.fa.masked /Users/minzhe/Documents/Project/Clirc/data/test/library/circRNA_coordinates.txt /Users/minzhe/Documents/Project/Clirc/data/test/library/halves.txt 1
 #!/usr/bin/perl
 

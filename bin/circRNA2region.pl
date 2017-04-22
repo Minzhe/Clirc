@@ -2,9 +2,9 @@
 #           circRNA2region.pl           #
 # ===================================== #
 # This perl script take the strandless circRNA coordinates and extract the left and right boundaries for sequence queries.
-# @ARGV[0]: the length of the RNA sequences to expand from the junction site
-# @ARGV[1]: the absolute path of output file (a teb-delimited file with 5 columns, chromosomes, +, start coordinates, end coordinates and id)
-# @ARGV[2]: the absolute path of input file (coordinates of known circRNAs, a tab-delimited file with 3 columns, chromosomes, start coordinates and end coordinates)
+# $file: the length of the RNA sequences to expand from the junction site
+# @items: the absolute path of output file (a teb-delimited file with 5 columns, chromosomes, +, start coordinates, end coordinates and id)
+# $id: the absolute path of input file (coordinates of known circRNAs, a tab-delimited file with 3 columns, chromosomes, start coordinates and end coordinates)
 # test: perl bin/circRNA2region.pl 50 /Users/minzhe/Documents/Project/Clirc/data/test/library/circRNA_coordinates.txt /Users/minzhe/Documents/Project/Clirc/data/test/dm3_chr4_circRNAs.txt
 #!/usr/bin/perl
 
