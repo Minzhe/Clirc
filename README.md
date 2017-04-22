@@ -17,7 +17,9 @@ Cite our paper:
 
 ## Install
 
-1. A recent version of **Perl** is needed. The user may also need to install `List::MoreUtils` and `Parallel::ForkManager` if these two modules are not installed yet. A txt file called MODULE is provided in the doc folder if the user doesn't know how to install Perl modules.
+1. A recent version of **Perl** is needed.
+
+The user may also need to install `List::MoreUtils` and `Parallel::ForkManager` if these two modules are not installed yet. A txt file called MODULE is provided in the doc folder if the user doesn't know how to install Perl modules.
 
 2. A recent version of **gsnap** is needed. 
 
@@ -25,9 +27,9 @@ Cite our paper:
 
 The whole Clirc software contains 3 commands in the bin directory to run for identifying RBP-bound circRNAs from CLIP-Seq data.
 ```{}
-	Clirc_library	build alignment library for identifying RBP-bound circRNAs from CLIP-Seq data
-	Clirc_search	search RBP-bound circRNAs in each SAM alignment file
-	Clirc_filter	filter Clirc_search results to generate final list of RBP-bound circRNAs
+Clirc_library	build alignment library for identifying RBP-bound circRNAs from CLIP-Seq data
+Clirc_search	search RBP-bound circRNAs in each SAM alignment file
+Clirc_filter	filter Clirc_search results to generate final list of RBP-bound circRNAs
 ```
 Please use `perl Clirc_library.pl -help`, `perl Clirc_search.pl -help`, and `perl Clirc_filter.pl -help` to show the detailed instructions for running each command. Here I will describe the general workflow of Clirc
 
@@ -47,7 +49,7 @@ perl bin/Clirc_filter.pl -out data/test/test_results.txt -input data/test/test1_
 
 ## Contact
 
-Tao Wang <tao.wang@utsouthwestern.edu>
+Tao Wang <<tao.wang@utsouthwestern.edu>>
 
 ## Version update
 
