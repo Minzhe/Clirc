@@ -35,6 +35,7 @@ foreach $file (@input_files) {
 }
 
 close(FILE_OUT);
+close(FILE_OUT1);
 
 print "Done extracting circRNA coordinates.\n";
 exit;
