@@ -16,6 +16,7 @@ my ($file, @items, $id);
 my ($expand, $output_file, @input_files) = @ARGV;
 
 open(FILE_OUT, "> " . $output_file);
+open(FILE_OUT1, ">" . $output_file . "_on_genome");
 
 foreach $file (@input_files) {
     open(FILE_IN, $file) or die("Open file $file failed: $!");
@@ -27,6 +28,7 @@ foreach $file (@input_files) {
         $id = $items[0] . "_" . $items[1] . "_" . $items[2] . ":" . $file;
         print FILE_OUT $items[0] . "\t+\t" . $items[1] . "\t" . min($items[2], $items[1]+$expand-1) . "\t" . $id . "\n";
         print FILE_OUT $items[0] . "\t+\t" . max($items[1], $items[2]-$expand+1) . "\t" . $items[2] . "\t" . $id . "\n";
+	print FILE_OUT1 $items[0] . "\t+\t" . $items[1] . "\t" . $items[2] . "\t" . $items[0] . "_" . $items[1] . "_" . $items[2] . "\n";
     }
 
     close(FILE_IN);
