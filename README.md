@@ -49,7 +49,7 @@ perl bin/Clirc_filter.pl -out data/test/test_results.txt -input data/test/test1_
 
 ## Contact
 
-Tao Wang <<tao.wang@utsouthwestern.edu>>
+Minzhe Zhang <<minzhe.zhang@utsouthwestern.edu>>
 
 ## Version update
 
