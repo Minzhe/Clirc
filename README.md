@@ -52,4 +52,4 @@ perl bin/Clirc_filter.pl -out data/test/test_results.txt -input data/test/test1_
 Minzhe Zhang <<minzhe.zhang@utsouthwestern.edu>>
 
 ## Version update
-
+0.1.0: First release. (11/12/2018)
