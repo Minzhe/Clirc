@@ -78,8 +78,6 @@ foreach $circ (keys %circ) {
 }
 
 close(FILE_OUT);
-
-print "Done removing adaptors.\n";
 exit;
 
 ##########    subroutine    ##########

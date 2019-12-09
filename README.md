@@ -17,11 +17,11 @@ Cite our paper:
 
 ## Install
 
-1. A recent version of **Perl** is needed.
+1. Clirc is built on **Perl v5.22.0**. Same or latter version is recommended.
 
 The user may also need to install `List::MoreUtils` and `Parallel::ForkManager` if these two modules are not installed yet. A txt file called MODULE is provided in the doc folder if the user doesn't know how to install Perl modules.
 
-2. A recent version of **gsnap** is needed. 
+2. Clirc is built on **gsnap version 2017-03-17**. Same or latter version is recommended. 
 
 ## Usage
 
