@@ -41,10 +41,9 @@ Please use `perl Clirc_library.pl -help`, `perl Clirc_search.pl -help`, and `per
 
 To demonstrate the usage of Clirc, we put two test fastq files in the data/test/ folder. And here are the demo commands to analyze them:
 ```{perl}
-perl bin/Clirc_library.pl -coord data/test/dm3_chr4_circRNAs.txt -genome data/test/chr4.fa.masked -library data/test/library
-perl bin/Clirc_search.pl -adaptor 5TGGC,TGAGATCGGAAGAGCGGTTCAGC -fastq data/test/test1.fastq -library data/test/library -results data/test/test1_results.txt -cleanup
-perl bin/Clirc_search.pl -adaptor 5TGGC,TGAGATCGGAAGAGCGGTTCAGC -fastq data/test/test2.fastq -library data/test/library -results data/test/test2_results.txt -cleanup
-perl bin/Clirc_filter.pl -out data/test/test_results.txt -input data/test/test1_results.txt,data/test/test2_results.txt -library data/test/library -cleanup
+perl bin/Clirc_library.pl -coord data/dm3_chr2L_circRNA.txt -genome data/test/dm3_chr2L_masked.fa -library data/test/library/
+perl bin/Clirc_search.pl -adaptor 5TGGC,TGAGATCGGAAGAGCGGTTCAGC -fastq data/test/example.fastq -library data/test/library -results data/test/example_reads.txt -cleanup
+perl bin/Clirc_filter.pl -out data/test/example_circ.txt -input data/test/example_reads.txt -library data/test/library -cleanup
 ```
 
 ## Contact
